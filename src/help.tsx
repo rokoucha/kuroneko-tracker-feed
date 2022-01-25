@@ -101,7 +101,7 @@ export const Help = ({ BASE_URL }: Env) => (
             type="text"
             readonly
             placeholder={`${BASE_URL}/feed/000000000000/atom`}
-            size={64}
+            size={72}
           />
           <button id="copy">アドレスをコピー</button>
           <button id="open">開く</button>
