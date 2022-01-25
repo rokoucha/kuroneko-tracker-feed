@@ -22,6 +22,7 @@
   },
   "scripts": {
     "build": "yarn node ./build.mjs",
-    "dev": "miniflare --live-reload --debug"
+    "dev": "miniflare --live-reload --debug",
+    "deploy": "wrangler publish"
   }
 }
