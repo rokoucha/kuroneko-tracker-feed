@@ -110,7 +110,7 @@ export const Help = ({ BASE_URL }: Env) => (
         <div>
           <p>
             <a href="https://github.com/rokoucha/kuroneko-tracker-feed">
-              kuroneko-tracker-feed/${VERSION}
+              kuroneko-tracker-feed/{VERSION}
             </a>
             , Developed by <a href="https://github.com/rokoucha">Rokoucha</a>
           </p>
