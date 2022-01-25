@@ -6,6 +6,7 @@ usage_model = ''
 compatibility_flags = []
 workers_dev = true
 compatibility_date = "2022-01-13"
+account_id = "9c06fda7643a430591cf56d434d1837f"
 
 [build]
 command = "npm run build"
