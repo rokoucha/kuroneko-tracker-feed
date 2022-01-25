@@ -22,3 +22,6 @@ KURONEKO_KEY = "22e2858b308cee5181c3e05ca7dd3082"
 KURONEKO_NUMBER00 = "1"
 KURONEKO_URL = "http://search.kuronekoyamato.co.jp/google/tnekog"
 VERSION = "1.0.0"
+
+[env.production.vars]
+BASE_URL = "https://kuroneko-tracker-feed.rokoucha.workers.dev"
