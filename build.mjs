@@ -11,4 +11,5 @@ await esbuild.build({
   outExtension: { '.js': '.mjs' },
   plugins: [pnpPlugin()],
   sourcemap: true,
+  treeShaking: true,
 })
