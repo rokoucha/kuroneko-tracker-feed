@@ -18,7 +18,8 @@ export function generateFeed(
     description: 'Kuroneko Yamato Tracker Feed Generator',
     id: getUrl(env.BASE_URL, `/feed/${number01}/${type}`),
     link: env.BASE_URL,
-    favicon: 'http://example.com/favicon.ico',
+    favicon:
+      'https://raw.githubusercontent.com/rokoucha/kuroneko-tracker-feed/master/kuroneko.ico',
     copyright: 'All rights reserved by Yamato Transport',
     updated: status.slice(-1)[0].date,
     generator: `kuroneko-tracker-feed/${env.VERSION}`,

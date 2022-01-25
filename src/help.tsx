@@ -64,6 +64,10 @@ export const Help = ({ BASE_URL }: Env) => (
           window.open(urlInput.value)
         })
       `}</script>
+      <link
+        rel="icon"
+        href="https://raw.githubusercontent.com/rokoucha/kuroneko-tracker-feed/master/kuroneko.ico"
+      />
       <title>Kuroneko Tracker Feed</title>
     </head>
     <body>
