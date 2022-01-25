@@ -604,6 +604,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"kuroneko-tracker-feed@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "kuroneko-tracker-feed@workspace:."
+  dependencies:
+    "@cloudflare/workers-types": ^3.3.0
+    "@cloudflare/wrangler": ^1.19.7
+    "@yarnpkg/esbuild-plugin-pnp": ^2.0.1-rc.1
+    "@zxing/text-encoding": ^0.9.0
+    esbuild: 0.14.13
+    feed: ^4.2.2
+    itty-router: 2.4.10
+    miniflare: 2.2.0
+    nano-jsx: ^0.0.28
+    prettier: 2.5.1
+    typescript: 4.5.5
+    zod: ^3.11.6
+  languageName: unknown
+  linkType: soft
+
 "miniflare@npm:2.2.0":
   version: 2.2.0
   resolution: "miniflare@npm:2.2.0"
@@ -768,25 +787,6 @@ __metadata:
   checksum: e15b5df9a56ab06d4895286033a6aff7b318ad024310df058b5821b3539cc06f716ef529618cac0dd78df40e37830de715f388c0f97f84062dd9be2326efcd0c
   languageName: node
   linkType: hard
-
-"sipimaus@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "sipimaus@workspace:."
-  dependencies:
-    "@cloudflare/workers-types": ^3.3.0
-    "@cloudflare/wrangler": ^1.19.7
-    "@yarnpkg/esbuild-plugin-pnp": ^2.0.1-rc.1
-    "@zxing/text-encoding": ^0.9.0
-    esbuild: 0.14.13
-    feed: ^4.2.2
-    itty-router: 2.4.10
-    miniflare: 2.2.0
-    nano-jsx: ^0.0.28
-    prettier: 2.5.1
-    typescript: 4.5.5
-    zod: ^3.11.6
-  languageName: unknown
-  linkType: soft
 
 "source-map-support@npm:^0.5.20":
   version: 0.5.21

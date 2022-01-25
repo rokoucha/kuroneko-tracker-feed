@@ -1,4 +1,10 @@
-import '@zxing/text-encoding/esm/encoding-indexes'
+import { encodingIndexes } from '@zxing/text-encoding/esm/encoding-indexes'
+
+declare const self: ServiceWorkerGlobalScope & {
+  TextEncodingIndexes: { encodingIndexes: typeof encodingIndexes }
+}
+self['TextEncodingIndexes'] = { encodingIndexes }
+
 import { TextDecoder } from '@zxing/text-encoding'
 import { ERROR_MATCHER, STATUS_MATCHER } from './constants'
 import { getKuronekoUrl } from './utils'
