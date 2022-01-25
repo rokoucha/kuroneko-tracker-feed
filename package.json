@@ -1,5 +1,5 @@
 {
-  "name": "sipimaus",
+  "name": "kuroneko-tracker-feed",
   "version": "1.0.0",
   "packageManager": "yarn@3.1.1",
   "module": "./dist/index.mjs",
