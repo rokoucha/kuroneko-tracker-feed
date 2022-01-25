@@ -14,3 +14,10 @@ command = "npm run build"
 format = "modules"
 dir = "dist"
 main = "./index.mjs"
+
+[vars]
+BASE_URL = "http://shizuka.dns.ggrel.net:8787"
+KURONEKO_KEY = "22e2858b308cee5181c3e05ca7dd3082"
+KURONEKO_NUMBER00 = "1"
+KURONEKO_URL = "http://search.kuronekoyamato.co.jp/google/tnekog"
+VERSION = "1.0.0"

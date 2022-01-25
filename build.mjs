@@ -5,6 +5,7 @@ await esbuild.build({
   bundle: true,
   entryPoints: ['./src/index.ts'],
   format: 'esm',
+  jsxFactory: 'h',
   minify: true,
   outdir: './dist',
   outExtension: { '.js': '.mjs' },
