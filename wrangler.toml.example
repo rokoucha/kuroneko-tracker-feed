@@ -1,0 +1,24 @@
+name = "kuroneko-tracker-feed"
+type = "javascript"
+route = ''
+zone_id = ''
+usage_model = ''
+compatibility_flags = []
+workers_dev = true
+compatibility_date = "2022-01-13"
+account_id = ""
+
+[build]
+command = "npm run build"
+
+[build.upload]
+format = "modules"
+dir = "dist"
+main = "./index.mjs"
+
+[vars]
+BASE_URL = ""
+KURONEKO_KEY = ""
+KURONEKO_NUMBER00 = ""
+KURONEKO_URL = ""
+VERSION = "1.0.0"
