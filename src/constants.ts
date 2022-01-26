@@ -5,8 +5,6 @@ export const CONTENT_TYPE = {
   json: 'application/feed+json',
 } as const
 
-export const ERROR_MATCHER =
-  /<tr><td><font size="5">([^<]+)<\/font><\/td><\/tr>\n<tr><td><br><\/td><\/tr>\n<tr><td><font size="4"><center>Error Code = ([^<]+)<\/center><\/font><\/td><\/tr>/g
+export const DATE_MATCHER = /(\d{2})月(\d{2})日\s+(\d{2}):(\d{2})/g
 
-export const STATUS_MATCHER =
-  /<tr>\n<td>(.+)<br><\/td>\n<td>(\d+)\/(\d+)<br><\/td>\n<td>(\d+):(\d+)<br><\/td>\n<td>(?:<a [^>]+>([^<]+)<\/a>|([^<]+))<br><\/td>\n<td>(.+)<br><\/td>/g
+export const TAG_VERSION = '2022-01-26'

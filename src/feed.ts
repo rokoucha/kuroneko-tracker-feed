@@ -1,5 +1,6 @@
 import { Feed } from 'feed'
-import { getKuronekoUrl, getUrl } from './utils'
+import { getUrl } from './utils'
+import { TAG_VERSION } from './constants'
 import type { Env, Status } from './types'
 
 export function generateFeed(
@@ -21,7 +22,7 @@ export function generateFeed(
     favicon:
       'https://raw.githubusercontent.com/rokoucha/kuroneko-tracker-feed/master/kuroneko.ico',
     copyright: 'All rights reserved by Yamato Transport',
-    updated: status.slice(-1)[0].date,
+    updated: status.details.slice(-1)[0].date,
     generator: `kuroneko-tracker-feed/${env.VERSION}`,
     feedLinks: {
       atom: getUrl(env.BASE_URL, `/feed/${number01}/atom`),
@@ -32,16 +33,22 @@ export function generateFeed(
 
   const fqdn = new URL(env.BASE_URL).hostname
 
-  for (const [i, s] of status.entries()) {
-    const { state, date, name, code } = s
+  const { state, summary, note, product, schedule } = status
+
+  for (const [i, d] of status.details.entries()) {
+    const { item, date, name } = d
+
+    const dateText = `${
+      date.getMonth() + 1
+    }月${date.getDate()}日 ${date.getHours()}:${date.getMinutes()}`
 
     feed.addItem({
-      title: `${state} at ${name}(${code})`,
-      id: `tag:${fqdn},2021:entry://${number01}-${i}`,
-      link: getKuronekoUrl(number01, env),
-      description: `${state} at ${name}(${code}) in ${date.toISOString()}`,
+      title: `${item} ${dateText} ${name}`,
+      id: `tag:${fqdn},${TAG_VERSION}:entry://${number01}-${i}`,
+      link: env.KURONEKO_URL,
+      description: `${state} - ${summary} ${note}\n商品名: ${product}, お届け予定日時: ${schedule}`,
       author: [author],
-      date: s.date,
+      date: date,
     })
   }
 
