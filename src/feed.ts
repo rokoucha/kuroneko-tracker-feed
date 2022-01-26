@@ -43,7 +43,7 @@ export function generateFeed(
     }月${date.getDate()}日 ${date.getHours()}:${date.getMinutes()}`
 
     feed.addItem({
-      title: `${item} ${dateText} ${name}`,
+      title: `${number01} ${item} ${dateText} ${name}`,
       id: `tag:${fqdn},${TAG_VERSION}:entry://${number01}-${i}`,
       link: env.KURONEKO_URL,
       description: `${state} - ${summary} ${note}\n商品名: ${product}, お届け予定日時: ${schedule}`,
