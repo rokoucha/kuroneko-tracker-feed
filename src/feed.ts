@@ -38,9 +38,11 @@ export function generateFeed(
   for (const [i, d] of status.details.entries()) {
     const { item, date, name } = d
 
-    const dateText = `${
-      date.getMonth() + 1
-    }月${date.getDate()}日 ${date.getHours()}:${date.getMinutes()}`
+    const dateText = `${String(date.getMonth() + 1).padStart(2, '0')}月${String(
+      date.getDate(),
+    ).padStart(2, '0')}日 ${String(date.getHours()).padStart(2, '0')}:${String(
+      date.getMinutes(),
+    ).padStart(2, '0')}`
 
     feed.addItem({
       title: `${number01} ${item} ${dateText} ${name}`,

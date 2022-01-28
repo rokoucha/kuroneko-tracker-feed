@@ -53,7 +53,9 @@ export async function getStatus(number01: number, env: Env): Promise<Status> {
       ][0]
 
       const date = new Date(
-        `${now.getFullYear()}-${month}-${day}T${hour}:${minute}:00+0900`,
+        `${now.getFullYear()}-${month}-${day}T${hour ?? '00'}:${
+          minute ?? '00'
+        }:00+0900`,
       )
 
       if (date > now) {
