@@ -1,4 +1,3 @@
-import { pnpPlugin } from '@yarnpkg/esbuild-plugin-pnp'
 import esbuild from 'esbuild'
 
 await esbuild.build({
@@ -9,7 +8,7 @@ await esbuild.build({
   minify: true,
   outdir: './dist',
   outExtension: { '.js': '.mjs' },
-  plugins: [pnpPlugin()],
   sourcemap: true,
   treeShaking: true,
+  platform: 'node',
 })

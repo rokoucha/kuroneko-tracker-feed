@@ -1,7 +1,7 @@
 {
   "name": "kuroneko-tracker-feed",
   "version": "2.0.0",
-  "packageManager": "yarn@3.1.1",
+  "packageManager": "pnpm@8.6.9",
   "module": "./dist/index.mjs",
   "type": "module",
   "dependencies": {
@@ -14,14 +14,13 @@
   "devDependencies": {
     "@cloudflare/workers-types": "^3.3.0",
     "@cloudflare/wrangler": "^1.19.7",
-    "@yarnpkg/esbuild-plugin-pnp": "^2.0.1-rc.1",
     "esbuild": "0.14.13",
     "miniflare": "2.2.0",
     "prettier": "2.5.1",
     "typescript": "4.5.5"
   },
   "scripts": {
-    "build": "yarn node ./build.mjs",
+    "build": "node ./build.mjs",
     "dev": "miniflare --live-reload --debug",
     "deploy": "wrangler publish"
   }
